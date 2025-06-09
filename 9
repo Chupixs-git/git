@@ -1,0 +1,43 @@
+    static Random random = new Random();
+
+public static (string goal, string reward, string difficulty) GenerateRandomQuest()
+{
+    List<string> giiit = new List<string>()
+{
+    "Найти доспехи ",
+    "Спасти кароля",
+    "Сжечь документы",
+    "Найти сыщика"
+};
+
+    List<string> gooot = new List<string>()
+{
+    "10 золота",
+    "20 серебра",
+    "мечь",
+    "подарок"
+};
+
+    List<string> gaaat = new List<string>()
+{
+    "Легко",
+    "Средне ",
+    "харж",
+    "невозможно"
+};
+
+    string goal = giiit[random.Next(giiit.Count)];
+    string reward = gooot[random.Next(gooot.Count)];
+    string difficulty = gaaat[random.Next(gaaat.Count)];
+
+    return (goal, reward, difficulty);
+}
+static void Main(string[] args)
+{
+    var quest = GenerateRandomQuest();
+    Console.WriteLine("Квеcт! ");
+    Console.WriteLine($"Цель - {quest.goal}");
+    Console.WriteLine($"Награда - {quest.reward}");
+    Console.WriteLine($"Сложность - {quest.difficulty}");
+
+}
