@@ -1,0 +1,38 @@
+
+        static Random random = new Random();
+
+        public static (string goal, string reward) GenerateRandomQuest()
+        {
+            List<string> giiit = new List<string>()
+        {
+            "Ар",
+            "Бор",
+            "Вал"
+
+        };
+
+            List<string> gooot = new List<string>()
+{
+              "мир",
+               "гон",
+               "рад"
+};
+
+
+            string goal = giiit[random.Next(giiit.Count)];
+            string reward = gooot[random.Next(gooot.Count)];
+
+
+            return (goal, reward);
+        }
+        static void Main(string[] args)
+        {
+            var quest = GenerateRandomQuest();
+
+            Console.WriteLine($"имя {quest.goal}{quest.reward}");
+
+
+
+        }
+    }
+}
