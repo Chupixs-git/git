@@ -1,0 +1,19 @@
+static int CheckNumber(int number)
+{
+    if (number > 0)
+    {
+        Console.WriteLine("Положительное");
+    }
+    else if (number < 0)
+    {
+        Console.WriteLine("Отрицательное");
+    }
+    else
+    {
+        Console.WriteLine("Равно 0");
+    }
+    return number;
+}
+static void Main(string[] args)
+{
+    int number = CheckNumber(5);
